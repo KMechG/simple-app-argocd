@@ -7,6 +7,6 @@ spec:
   selector:
     app: simple-app-argocd
   ports:
-      - nodePort: 30443
+      - nodePort: 31000
         protocol: TCP
         port: 8080
