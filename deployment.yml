@@ -14,7 +14,9 @@ spec:
         app: simple-app-argocd
     spec:
       containers:
-      - name: webserver-simple
-        image: nginx
+      - name: httpbin
+        image: docker.io/kennethreitz/httpbin
+        imagePullPolicy: IfNotPresent
+        
         ports:
         - containerPort: 8080
