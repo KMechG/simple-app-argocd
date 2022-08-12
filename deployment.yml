@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: httpbin
-        image: docker.io/kennethreitz/httpbin
+        image: docker.io/ubuntu/nginx
         imagePullPolicy: Always
         
         ports:
