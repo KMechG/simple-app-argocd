@@ -38,16 +38,7 @@
             ports:
               - containerPort: 6379
                 name: redis
-- apiVersion: v1
-  kind: Service
-  metadata:
-    name: azure-vote-back
-    namespace: azure-vote
-  spec:
-    ports:
-      - port: 6379
-    selector:
-      app: azure-vote-back
+
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
@@ -80,14 +71,3 @@
             env:
               - name: REDIS
                 value: azure-vote-back
-- apiVersion: v1
-  kind: Service
-  metadata:
-    name: azure-vote-front
-    namespace: azure-vote
-  spec:
-    type: LoadBalancer
-    ports:
-      - port: 80
-    selector:
-      app: azure-vote-front
